@@ -1,14 +1,10 @@
 header {
-    background-color: #f8f9fa;
+    background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
 }
 
-#logo {
-    width: 200px;
-    height: 200px;
-    background-image: url('../assets/holberton-logo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+h1 {
+    color: #333;
 }
+

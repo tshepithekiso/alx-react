@@ -1,5 +1,10 @@
-#count {
-    font-weight: bold;
-    display: inline-block;
-    margin-left: 10px; /* Space between button and count */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
 }
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+

@@ -2,14 +2,16 @@ import $ from 'jquery';
 import _ from 'lodash';
 import './body.css';
 
-$('body').append('<button id="clickButton">Click here to get started</button>');
-$('body').append("<p id='count'></p>");
+let counter = 0;
 
-let count = 0;
+$(document).ready(() => {
+    const button = $('<button>Click me</button>');
+    const counterDisplay = $('<p>Counter: 0</p>');
 
-function updateCounter() {
-    count += 1;
-    $('#count').text(`${count} clicks on the button`);
-}
+    button.on('click', () => {
+        counter++;
+        counterDisplay.text(`Counter: ${counter}`);
+    });
 
-$('#clickButton').on('click', _.debounce(updateCounter, 300));
+    $('body').append(button, counterDisplay);
+});
