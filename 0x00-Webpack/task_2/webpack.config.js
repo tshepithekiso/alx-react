@@ -11,24 +11,41 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'], // Load CSS files
+                use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|jpg|gif|svg)$/, // Handle image files
+                test: /\.(png|jpe?g|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[ext]', // Preserve original path and name
-                            outputPath: 'assets/', // Output images to assets folder
+                            name: '[path][name].[ext]',
+                            outputPath: 'assets/',
+                            publicPath: 'assets/',
+                        },
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.90],
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            webp: {
+                                quality: 75,
+                            },
                         },
                     },
                 ],
             },
         ],
     },
-    optimization: {
-        // Optimize images
-        minimize: true,
-    },
 };
+
