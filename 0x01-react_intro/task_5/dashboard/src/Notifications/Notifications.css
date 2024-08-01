@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-/* task_2/dashboard/src/Notifications.css */
-
 .Notifications {
   border: 1px solid #ccc;
   padding: 10px;
@@ -14,18 +11,3 @@
 [data-priority="urgent"] {
   color: red;
 }
-=======
-.Notifications {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 20px 0;
-}
-
-[data-priority="default"] {
-  color: blue;
-}
-
-[data-priority="urgent"] {
-  color: red;
-}
->>>>>>> 7f5de37a39e040129074848ed9fd121d1772038d
