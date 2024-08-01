@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Login from '../Login/Login';
 import CourseList from '../CourseList/CourseList';
 import Notifications from '../Notifications/Notifications';
+import { CourseShape } from '../CourseList/CourseShape';
+import { NotificationItemShape } from '../Notifications/NotificationItemShape';
 import './App.css';
 
 class App extends Component {
@@ -24,5 +26,32 @@ class App extends Component {
   }
 
   render() {
-    const {
+    const { isLoggedIn, listCourses, listNotifications } = this.state;
+
+    return (
+      <>
+        <Notifications listNotifications={listNotifications} displayDrawer />
+        {isLoggedIn ? (
+          <CourseList listCourses={listCourses} />
+        ) : (
+          <Login />
+        )}
+      </>
+    );
+  }
+}
+
+App.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  listCourses: PropTypes.arrayOf(CourseShape),
+  listNotifications: PropTypes.arrayOf(NotificationItemShape),
+};
+
+App.defaultProps = {
+  isLoggedIn: false,
+  listCourses: [],
+  listNotifications: [],
+};
+
+export default App;
 
