@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* task_2/dashboard/src/App.css */
 
 .App-body {
@@ -28,3 +29,33 @@ button {
 button:hover {
   background-color: #45a049; /* Darker green on hover */
 }
+=======
+.App-body {
+  padding: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 8px;
+  width: 200px; /* Adjust width as needed */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+>>>>>>> 7f5de37a39e040129074848ed9fd121d1772038d
