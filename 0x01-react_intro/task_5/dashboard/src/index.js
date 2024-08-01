@@ -1,5 +1,16 @@
-import './styles.css'; // Import CSS file if you have one
+// task_5/dashboard/src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles.css'; // Ensure this file exists
 
-const app = document.getElementById('app');
-app.innerHTML = `<h1>Hello, Webpack!</h1>`;
+const App = () => {
+  return (
+    <div>
+      <h1>Hello, React Intro!</h1>
+      <p>Welcome to your React dashboard!</p>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('app'));
 
