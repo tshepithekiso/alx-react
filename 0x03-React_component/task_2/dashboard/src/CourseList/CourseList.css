@@ -1,0 +1,15 @@
+/* src/CourseList/CourseList.css */
+#CourseList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#CourseList th, #CourseList td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#CourseList th {
+  background-color: #f4f4f4;
+}
+
