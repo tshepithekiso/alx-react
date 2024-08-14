@@ -1,31 +1,21 @@
-/**
- * Accesses the value of an object at the defined path.
- * @param {Object} object - The object to access.
- * @param {Array} path - An array containing the path to the desired key.
- * @returns {*} - The value at the defined path, or undefined if not found.
- */
-function accessImmutableObject(object, path) {
-    let value = object;
-    for (let key of path) {
-        if (value && typeof value === 'object') {
-            value = value[key];
-        } else {
+import { Map } from 'immutable';
+
+export default function accessImmutableObject(object, array) {
+    return array.reduce((acc, key) => {
+        if (acc === undefined) {
             return undefined;
         }
-    }
-    return value;
+        return acc[key];
+    }, object);
 }
 
-// Export the function using CommonJS syntax
-module.exports = accessImmutableObject;
-
-// Example usage
-const exampleObject = {
+const object = {
     name: {
         first: "Guillaume",
         last: "Salva"
     }
 };
 
-const result = accessImmutableObject(exampleObject, ['name', 'first']);
-console.log(result); // Output: Guillaume
+console.log(accessImmutableObject(object, ['name', 'first'])); // Should return "Guillaume"
+console.log(accessImmutableObject(object, ['name', 'middle'])); // Should return undefined
+
