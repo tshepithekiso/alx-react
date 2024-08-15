@@ -1,4 +1,4 @@
-import { Seq } from "immutable";
+import { Seq } from 'immutable';
 
 export default function printBestStudents(object) {
   const seq = Seq(object);
@@ -22,4 +22,3 @@ export default function printBestStudents(object) {
 
   console.log(JSObject);
 }
-
