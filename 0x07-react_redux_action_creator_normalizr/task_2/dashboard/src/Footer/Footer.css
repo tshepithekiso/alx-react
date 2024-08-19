@@ -1,0 +1,11 @@
+/* Footer.css */
+.App-footer {
+  background-color: #282c34;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
